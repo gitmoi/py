@@ -9,10 +9,12 @@ activities = {8: 'Sleeping',
 
 time_now = localtime()
 hour = time_now.tm_hour
+print("Current hour=" ,hour)
 
 for activity_time in sorted(activities.keys()):
+    print("Activity Time=",activity_time)
     if hour < activity_time:
         print (activities[activity_time])
         break
 else:
-    print ('Unknown, AFK or sleeping!')
+    print('Unknown, AFK or sleeping!')
